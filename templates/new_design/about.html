@@ -1,0 +1,103 @@
+{% extends 'index.html' %} 
+{% load static %} 
+{% block style %}
+    <link rel="stylesheet" href="{% static 'new_css/css/about.css' %}" />
+{% endblock style %} 
+{% block title %}About Us {% endblock title %}
+{% block carousel-js %} {% endblock carousel-js %}
+{% block slick-carousel %} {% endblock slick-carousel %}
+{% block slider-form %} {% endblock slider-form %}
+<script>
+  {% block copyright-year %}
+  {{ block.super }}
+  {% endblock copyright-year %}
+  {% block dynamic-nav %}
+  {{ block.super }}
+  {% endblock dynamic-nav %}
+  {% block smooth-scrolling %}
+  {{ block.super }}
+  {% endblock smooth-scrolling %}
+
+  {% block generic-js %}
+  // Make header dissapear 
+    $(document).ready(setTimeout(function(){
+      $('#header').remove();
+    }, 3000))
+    {% endblock generic-js %}
+</script>
+
+{% block content %}
+  <!-- HEADER -->
+  <section id="header">
+    <div class="dark-header text-white text-center pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>About</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about-me">
+    <div class="row no-gutters">
+      <div class="col-md-3 text-center" id="about-me-section">
+        <img src="{% static 'images/new_design/person1.jpg' %}" alt="Photo of the autor" class="my-4" height="150" width="150">
+        <h3>Zoran Stoilov</h3>
+        <p class="px-3">Hey there. I am a Web Developer with a passion about Python and JavaScript. I started creating
+          web-sites and web-apps with Django and jQuery, and can say that I absolutely love them. Feel free
+          to contact me if you have a project or want some collab.
+        </p>
+        <div class="left-text px-3">
+          <p>Github:
+            <a href="https://www.github.com/Zoki92" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+          </p>
+          <p>Email:
+            <i class="fas fa-envelope p-2">  zoranstoilov@yahoo.com</i>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-9 pt-5" id="timeline-section">
+        
+        <div class="container">
+            <h2>Timeline</h2>
+          <ul>
+            <li>
+              <span></span>
+              <div class="title">Started Introduction to Programming in C</div>
+              <div class="info">Went through University C course called Introduction to Programming, and successfuly passed the final exam.</div>
+              <div class="type">Ended course</div>
+              <div class="time">
+                <span>09/2010</span>
+                <span>12/2010</span>
+              </div>
+            </li>
+            <li>
+              <span></span>
+              <div class="title">Started Object Oriented Programming in C++</div>
+              <div class="info">Went through University C++ course for Object Oriented Programming, and succesufuly passed the final exam.</div>
+              <div class="type">Ended course</div>
+              <div class="time">
+                <span>01/2011</span>
+                <span>05/2011</span>
+              </div>
+            </li>
+            <li>
+              <span></span>
+              <div class="title">Started Learning Python</div>
+              <div class="info">Initially started Web Development course with Flask and after successfuly completing it, I started with Django too. 
+                One of the original sources used was Corey Schafer's youtube course, and after that I just kept adding knowledge.
+              </div>
+              <div class="type">Still learning</div>
+              <div class="time">
+                <span>06/2018</span>
+                <span>Present</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

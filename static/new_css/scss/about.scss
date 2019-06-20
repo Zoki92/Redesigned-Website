@@ -1,0 +1,135 @@
+
+
+$primary: rgb(50, 146, 166);
+$primary-overlay: rgba(15, 124, 148, 0.6);
+$darker-primary: darken(
+  $color: $primary,
+  $amount: 13
+);
+
+
+
+#header {
+    box-shadow: 0 0 5px $primary;
+    position: relative;
+    background: url("../../../static/images/new_design/header-pic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -500px;
+    min-height: 250px;
+    width: 100%;
+    .dark-header {
+        background: $primary-overlay;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#about-me {
+  #about-me-section {
+    padding-top: 200px;
+    height: 800px;
+    color: white;
+    img {
+      border-radius: 50%;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .left-text {
+      text-align: left;
+    }
+  }
+
+  #timeline-section {
+    height: 800px;
+    background: #fff;
+    color: $primary;
+    .container {
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        li {
+          margin: 50px 60px;
+          position: relative;
+          box-shadow: 0 0 5px $primary;
+        }
+      }
+      ul:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        border: 1px dashed $primary;
+      }
+      ul li > span{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -60px;
+        width: 2px;
+        height: 100%;
+        border: 1px solid #eee;
+      }
+      ul li > span:before,
+      ul li > span:after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border: 2px solid $primary;
+        position: absolute;
+        border-radius: 50%;
+        left: -5px;
+        background: #fff;
+      }
+      ul li > span:before{
+        top: -5px;
+      }
+      ul li > span:after {
+        top: 100%;
+      }
+      ul li .time span {
+        position: absolute;
+        font-size: 12px;
+        left: -125px;
+        width: 30px;
+        text-align: right;
+      }
+      ul li .time span:first-child {
+        top: -12px;
+      }
+      ul li .time span:last-child {
+        top: 100%;
+      }
+    }
+
+
+
+
+
+  }
+  #about-me-section::after {
+    content: "";
+    background: url("../../images/new_design/rails.jpg") no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    }
+}
+
+#about-me::after {
+ 
+}
